@@ -75,19 +75,19 @@ st.markdown("### Count of URLs based on whether they start with an IP address or
 st.markdown("---")
 st.markdown("### Count of URLs based on whether they have punycode characters")
 has_punycode = df['has_punycode'].value_counts()
-st.write(has_punycode)
+st.dataframe(has_punycode)
 
 # ====================================== #
 st.markdown("---")
 st.markdown("### Count of URLs based on whether their domain contains digits")
 domain_has_digits = df['domain_has_digits'].value_counts()
-st.write(domain_has_digits)
+st.dataframe(domain_has_digits)
 
 # ====================================== #
 st.markdown("---")
 st.markdown("### Count of URLs based on whether their subdirectory contains links")
 has_internal_links = df['has_internal_links'].value_counts()
-st.write(has_internal_links)
+st.dataframe(has_internal_links)
 
 # ================================================================================================================================== #
 st.markdown("---")
