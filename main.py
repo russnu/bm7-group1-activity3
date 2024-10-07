@@ -157,6 +157,34 @@ st.markdown("""Pie chart shows the proportions of URLs with and without punycode
 st.markdown("---")
 st.markdown("### **Agor**")
 
+has_imternal_links = df['has_internal_links'].value_counts()
+colors = ['lightblue', 'green']
+
+
+plt.pie(has_internal_links, labels = ['Doesnt have Internal links', 'has Internal links'], , autopct='%1.1f%%', colors=color)
+plt.title ('Distribution of Internal Links in URLs')
+plt.show()
+
+
+labels = ['Legitimate', 'Phishing']
+values = [1250000, 1250000]  
+
+
+plt.figure(figsize=(8, 6))
+plt.bar(labels = ['Legitimate', 'Phishing'], values, color=['lightgreen', 'salmon'])
+
+
+plt.title('Count of Legitimate vs Phishing URLs', fontsize=14)
+plt.ylabel('Count', fontsize=12)
+
+
+for i, v in enumerate(values):
+    plt.text(i, v + 30000, str(v), ha='center', fontsize=10)
+
+plt.show()
+
+
+
 # ================================================================================================================================== #
 st.markdown("---")
 st.markdown("## **Conclusion**")
